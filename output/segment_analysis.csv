@@ -1,0 +1,4 @@
+customer_segment,total_orders,total_units,gross_revenue,refunds,net_revenue,average_order_value
+consumer,82134,269156.0,52075730.68,2773957.23,49301773.45,600.26
+small_business,14909,49258.0,9482924.84,522133.19,8960791.65,601.03
+enterprise,2957,9752.0,1899907.15,91812.23,1808094.92,611.46
