@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  superset:
+    build: .
+    ports:
+      - "8088:8088"
+    environment:
+      - SUPERSET_SECRET_KEY=your_secret_key_here_12345
+    volumes:
+      # This line gives Superset access to your project's data folder!
+      - ../data:/app/data
+    command: >
+      bash -c "superset db upgrade && 
+               superset fab create-admin --username admin --firstname Superset --lastname Admin --email admin@superset.com --password admin && 
+               superset init && 
+               /usr/bin/run-server.sh"
